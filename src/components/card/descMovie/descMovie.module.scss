@@ -1,0 +1,44 @@
+.movieList {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.movieCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+
+.cardImage {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movieTittle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.movieTittleKet {
+  padding: 0;
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.movieTittleDur {
+  padding: 0;
+  margin: 0;
+  font-size: 0.7em;
+  font-weight: 400;
+}

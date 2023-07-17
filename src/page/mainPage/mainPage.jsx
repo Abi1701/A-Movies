@@ -2,9 +2,10 @@ import React from "react";
 import styled from "./mainPage.module.scss";
 import Header from "../../components/header/header";
 import Border from "../../assets/border.svg";
-import JW from "../../assets/JW.jpg";
-import Cinema1 from "../../assets/cinema.jpg";
 import { Facebook, LinkedIn, Twitter } from "@mui/icons-material";
+import CardNowPlayingMovie from "../../components/card/popularMovieCard/card";
+import UpComingCard from "../../components/card/upcomingMovieCard/upcomingCard";
+import DescMovie from "../../components/card/descMovie/descMovie";
 
 export default function MainPage() {
 	return (
@@ -26,16 +27,7 @@ export default function MainPage() {
 							The Riddler kills Savage and leaves another message for Batman.
 						</p>
 					</div>
-					<div className={styled.mainPageVideo}>
-						<iframe
-							width="560"
-							height="315"
-							src="https://www.youtube.com/embed/mqqft2x_Aa4"
-							title="YouTube video player"
-							frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-							allowFullScreen></iframe>
-					</div>
+					<div className={styled.mainPageVideo}></div>
 				</div>
 			</section>
 			<section className={styled.subMainPage}>
@@ -49,64 +41,7 @@ export default function MainPage() {
 					</div>
 					<img className={styled.borderPage} src={Border} alt="border" />
 					<div className={styled.movieList}>
-						<div className={styled.movieCard}>
-							<img className={styled.cardImage} src={JW} alt="john wick" />
-							<div className={styled.movieTittle}>
-								<h1 className={styled.movieTittleKet}>John Wick</h1>
-								<h5 className={styled.movieTittleDur}>120 mins || Action</h5>
-							</div>
-						</div>
-						<div className={styled.movieCard}>
-							<img className={styled.cardImage} src={JW} alt="john wick" />
-							<div className={styled.movieTittle}>
-								<h1 className={styled.movieTittleKet}>John Wick</h1>
-								<h5 className={styled.movieTittleDur}>120 mins || Action</h5>
-							</div>
-						</div>
-						<div className={styled.movieCard}>
-							<img className={styled.cardImage} src={JW} alt="john wick" />
-							<div className={styled.movieTittle}>
-								<h1 className={styled.movieTittleKet}>John Wick</h1>
-								<h5 className={styled.movieTittleDur}>120 mins || Action</h5>
-							</div>
-						</div>
-						<div className={styled.movieCard}>
-							<img className={styled.cardImage} src={JW} alt="john wick" />
-							<div className={styled.movieTittle}>
-								<h1 className={styled.movieTittleKet}>John Wick</h1>
-								<h5 className={styled.movieTittleDur}>120 mins || Action</h5>
-							</div>
-						</div>
-						<div className={styled.movieList}>
-							<div className={styled.movieCard}>
-								<img className={styled.cardImage} src={JW} alt="john wick" />
-								<div className={styled.movieTittle}>
-									<h1 className={styled.movieTittleKet}>John Wick</h1>
-									<h5 className={styled.movieTittleDur}>120 mins || Action</h5>
-								</div>
-							</div>
-							<div className={styled.movieCard}>
-								<img className={styled.cardImage} src={JW} alt="john wick" />
-								<div className={styled.movieTittle}>
-									<h1 className={styled.movieTittleKet}>John Wick</h1>
-									<h5 className={styled.movieTittleDur}>120 mins || Action</h5>
-								</div>
-							</div>
-							<div className={styled.movieCard}>
-								<img className={styled.cardImage} src={JW} alt="john wick" />
-								<div className={styled.movieTittle}>
-									<h1 className={styled.movieTittleKet}>John Wick</h1>
-									<h5 className={styled.movieTittleDur}>120 mins || Action</h5>
-								</div>
-							</div>
-							<div className={styled.movieCard}>
-								<img className={styled.cardImage} src={JW} alt="john wick" />
-								<div className={styled.movieTittle}>
-									<h1 className={styled.movieTittleKet}>John Wick</h1>
-									<h5 className={styled.movieTittleDur}>120 mins || Action</h5>
-								</div>
-							</div>
-						</div>
+						<CardNowPlayingMovie />
 					</div>
 				</div>
 			</section>
@@ -115,74 +50,12 @@ export default function MainPage() {
 					<h1 className={styled.tittlePage}>Coming Soon!</h1>
 					<img className={styled.borderPage} src={Border} alt="border" />
 					<div className={styled.movieList}>
-						<div className={styled.movieCard}>
-							<img className={styled.cardImage} src={JW} alt="john wick" />
-							<div className={styled.movieTittle}>
-								<h1 className={styled.movieTittleKet}>John Wick</h1>
-								<h5 className={styled.movieTittleDur}>120 mins || Action</h5>
-							</div>
-						</div>
-						<div className={styled.movieCard}>
-							<img className={styled.cardImage} src={JW} alt="john wick" />
-							<div className={styled.movieTittle}>
-								<h1 className={styled.movieTittleKet}>John Wick</h1>
-								<h5 className={styled.movieTittleDur}>120 mins || Action</h5>
-							</div>
-						</div>
-						<div className={styled.movieCard}>
-							<img className={styled.cardImage} src={JW} alt="john wick" />
-							<div className={styled.movieTittle}>
-								<h1 className={styled.movieTittleKet}>John Wick</h1>
-								<h5 className={styled.movieTittleDur}>120 mins || Action</h5>
-							</div>
-						</div>
-						<div className={styled.movieCard}>
-							<img className={styled.cardImage} src={JW} alt="john wick" />
-							<div className={styled.movieTittle}>
-								<h1 className={styled.movieTittleKet}>John Wick</h1>
-								<h5 className={styled.movieTittleDur}>120 mins || Action</h5>
-							</div>
-						</div>
+						<UpComingCard />
 					</div>
 					<div className={styled.newsContainer}>
 						<h1>What's New?</h1>
 						<div className={styled.newsCardContainer}>
-							<div className={styled.newsCard}>
-								<img className={styled.newsImage} src={Cinema1} alt="cinema" />
-								<h1 className={styled.newsTittle}>
-									Good Place to Watch New Movie
-								</h1>
-								<p className={styled.newsParagraf}>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-									do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-									Ut enim ad minim veniam, quis nostrud exercitation ullamco
-									laboris nisi ut aliquip ex ea commodo consequat.
-								</p>
-							</div>
-							<div className={styled.newsCard}>
-								<img className={styled.newsImage} src={Cinema1} alt="cinema" />
-								<h1 className={styled.newsTittle}>
-									Good Place to Watch New Movie
-								</h1>
-								<p className={styled.newsParagraf}>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-									do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-									Ut enim ad minim veniam, quis nostrud exercitation ullamco
-									laboris nisi ut aliquip ex ea commodo consequat.
-								</p>
-							</div>
-							<div className={styled.newsCard}>
-								<img className={styled.newsImage} src={Cinema1} alt="cinema" />
-								<h1 className={styled.newsTittle}>
-									Good Place to Watch New Movie
-								</h1>
-								<p className={styled.newsParagraf}>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-									do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-									Ut enim ad minim veniam, quis nostrud exercitation ullamco
-									laboris nisi ut aliquip ex ea commodo consequat.
-								</p>
-							</div>
+							<DescMovie />
 						</div>
 					</div>
 				</div>
@@ -196,14 +69,10 @@ export default function MainPage() {
 					</div>
 					<div className={styled.footerContentSocial}>
 						<div className={styled.footerOption}>
-							<a href="">HOME</a>
-							<a href="">MOVIES</a>
-							<a href="">TV SHOWS</a>
-							<a href="">TV SERIES</a>
-						</div>
-						<div className={styled.footerContentContact}>
-							<h1>Contact for Build Website</h1>
-							<h3>Abi 08080808080</h3>
+							<a href="/">HOME</a>
+							<a href="/">MOVIES</a>
+							<a href="/">TV SHOWS</a>
+							<a href="/">TV SERIES</a>
 						</div>
 					</div>
 					<div className={styled.footerContentIcon}>
