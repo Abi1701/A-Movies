@@ -48,6 +48,7 @@
   background-size: 400%;
   border: none;
   cursor: pointer;
+  background-color: #E4DCCF;
 }
 .buttonPage:hover::before{
   transform: scaleX(1);
@@ -55,9 +56,9 @@
 .buttonPageContent{
   position: relative;
   z-index: 1;
-  color: wheat;
+  color: black;
   font-weight: 700;
-  
+  font-family: 'Poppins', sans-serif;
 }
 .buttonPage::before{
 content: '';
