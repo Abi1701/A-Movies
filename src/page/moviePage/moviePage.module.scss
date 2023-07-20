@@ -88,3 +88,90 @@
   font-size: 1em;
   color: wheat;
 }
+@media only screen and (min-width:300px) and (max-width:500px) {
+  .moviePage{
+ background:#454545;
+  width: 100%;
+  height: auto;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position: center;
+  padding: 0 0 10rem 0rem;
+}
+.navigationBar{
+  display: flex;
+  gap: 10px;
+}
+.input{
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+  margin-left: 3rem;
+  border:#CF0A0A;
+  outline: #CF0A0A;
+}
+
+.movieContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 0rem 0rem 3rem;
+}
+.buttonCat {
+  display: none;
+}
+
+.buttonCat:hover {
+  background-color: #CF0A0A;
+  animation: ease-in-out 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) fill-mode;
+}
+.movieList {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.movieCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardImage {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movieTittle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.movieTittleKet {
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+  color: wheat;
+}
+
+.movieTittleDur {
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+  color: wheat;
+}
+}
