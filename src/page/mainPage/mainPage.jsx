@@ -6,6 +6,7 @@ import { Facebook, LinkedIn, Twitter } from "@mui/icons-material";
 import CardNowPlayingMovie from "../../components/card/popularMovieCard/card";
 import UpComingCard from "../../components/card/upcomingMovieCard/upcomingCard";
 import DescMovie from "../../components/card/descMovie/descMovie";
+import MainPageContent from "../../components/content/mainPageContent";
 
 export default function MainPage() {
 	return (
@@ -13,21 +14,7 @@ export default function MainPage() {
 			<section className={styled.mainPage}>
 				<Header />
 				<div className={styled.mainPageContainer}>
-					<div className={styled.mainPageContent}>
-						<h1 className={styled.tittle}>THE</h1>
-						<h2 className={styled.subTittle}>BATMAN</h2>
-						<p className={styled.paragraf}>
-							On Halloween, Gotham City mayor Don Mitchell Jr. is murdered by a
-							serial killer calling himself the Riddler. Billionaire Bruce
-							Wayne, who has operated for two years as the vigilante Batman,
-							investigates alongside the Gotham City Police Department (GCPD).
-							Lieutenant James Gordon discovers that the Riddler left a message
-							for Batman, but commissioner Pete Savage berates him for allowing
-							a vigilante to enter the crime scene and forces Batman to leave.
-							The Riddler kills Savage and leaves another message for Batman.
-						</p>
-					</div>
-					<div className={styled.mainPageVideo}></div>
+					<MainPageContent />
 				</div>
 			</section>
 			<section className={styled.subMainPage}>
@@ -69,10 +56,18 @@ export default function MainPage() {
 					</div>
 					<div className={styled.footerContentSocial}>
 						<div className={styled.footerOption}>
-							<a href="/">HOME</a>
-							<a href="/">MOVIES</a>
-							<a href="/">TV SHOWS</a>
-							<a href="/">TV SERIES</a>
+							<a className={styled.footerItems} href="/">
+								HOME
+							</a>
+							<a className={styled.footerItems} href="/">
+								MOVIES
+							</a>
+							<a className={styled.footerItems} href="/">
+								TV SHOWS
+							</a>
+							<a className={styled.footerItems} href="/">
+								TV SERIES
+							</a>
 						</div>
 					</div>
 					<div className={styled.footerContentIcon}>

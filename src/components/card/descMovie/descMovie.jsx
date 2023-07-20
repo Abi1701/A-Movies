@@ -16,7 +16,7 @@ export default function DescMovie() {
 				<img
 					className={styled.cardImage}
 					src={`${process.env.REACT_APP_BASE_IMGURL}/${movie.poster_path}`}
-					alt="john wick"
+					alt="poster"
 				/>
 				<div className={styled.movieTittle}>
 					<h1 className={styled.movieTittleKet}>
