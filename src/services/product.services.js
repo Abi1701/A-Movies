@@ -26,5 +26,6 @@ export const getSearch = async (q) => {
 
 export const getDetailMovie = async (id) => {
 	const detail = await fetch(`${BASEURL}/movie/find/${id}?api_key=${APIKEY}`);
+	console.log(detail);
 	return detail.length;
 };

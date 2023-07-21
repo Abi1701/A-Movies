@@ -15,11 +15,9 @@ export default function DetailPage() {
 			const result = await fetch(`${BASEURL}/movie/${id}?api_key=${APIKEY}`);
 			const data = await result.json();
 			setMovie(data);
-			console.log(result);
 		};
 		getMovie();
 	}, [id]);
-	console.log(movie);
 
 	return (
 		<section className={styled.detailSection}>

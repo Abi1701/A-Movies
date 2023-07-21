@@ -10,11 +10,11 @@ export default function CardNowPlayingMovie() {
 			setNowPlayingMovie(results);
 		});
 	}, []);
-	return nowPlayingMovie.slice(0, 10).map((movie, i) => {
+	return nowPlayingMovie.slice(0, 10).map((movie, index) => {
 		return (
 			<Link to={`/detailspage/${movie.id}`}>
 				{" "}
-				<div className={styled.movieCard} key={i}>
+				<div className={styled.movieCard} key={index}>
 					<img
 						className={styled.cardImage}
 						src={`${process.env.REACT_APP_BASE_IMGURL}/${movie.poster_path}`}

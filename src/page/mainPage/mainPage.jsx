@@ -2,7 +2,7 @@ import React from "react";
 import styled from "./mainPage.module.scss";
 import Header from "../../components/header/header";
 import Border from "../../assets/border.svg";
-import { Facebook, LinkedIn, Twitter } from "@mui/icons-material";
+import { LinkedIn } from "@mui/icons-material";
 import CardNowPlayingMovie from "../../components/card/popularMovieCard/card";
 import UpComingCard from "../../components/card/upcomingMovieCard/upcomingCard";
 import DescMovie from "../../components/card/descMovie/descMovie";
@@ -36,7 +36,7 @@ export default function MainPage() {
 						<button
 							onClick={() => setActive("Movie")}
 							className={styled.buttonCat}>
-							Movies
+							Now Playing Movies
 						</button>
 					</div>
 					<img className={styled.borderPage} src={Border} alt="border" />
