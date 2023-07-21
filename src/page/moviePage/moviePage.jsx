@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function MoviePage() {
 	const [nowPlayingMovie, setNowPlayingMovie] = React.useState([]);
+
 	React.useEffect(() => {
 		getMovieNowPlaying().then((results) => {
 			setNowPlayingMovie(results);
@@ -30,13 +31,9 @@ export default function MoviePage() {
 					placeholder="Search Movie Here"
 					onChange={({ target }) => search(target.value)}
 				/>
-				<button className={styled.buttonCat}>All Films</button>
-				<button className={styled.buttonCat}>Series</button>
-				<button className={styled.buttonCat}>Movies</button>
-				<button className={styled.buttonCat}>TV Shows</button>
 			</div>
 			<div className={styled.movieContainer}>
-				{nowPlayingMovie.slice(0, 10).map((movie, i) => {
+				{nowPlayingMovie.slice(0, 20).map((movie, i) => {
 					return (
 						<Link to={`/detailspage/${movie.id}`}>
 							<div className={styled.movieCard} key={i}>
